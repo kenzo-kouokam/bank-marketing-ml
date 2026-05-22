@@ -16,7 +16,7 @@ Chaque ligne représente un contact client, avec des informations :
 - situation financière (crédit immobilier, prêt personnel, solde du compte)  
 - historique de contact (nombre de contacts, campagne précédente, délai depuis le dernier contact)  
 - contexte de la campagne (mois, jour de la semaine, type de contact)  
-- **variable cible `y`** : le client a‑t‑il souscrit un dépôt à terme ? (`yes` / `no`) [web:448][web:454]
+- **variable cible `y`** : le client a‑t‑il souscrit un dépôt à terme ? (`yes` / `no`)
 
 Le dataset est **déséquilibré** : la majorité des clients ne souscrivent pas au produit proposé.
 
@@ -29,4 +29,4 @@ Pour reproduire l'analyse :
    - Kaggle : `bank-marketing-dataset`
    - ou la version UCI d'origine.  
 2. Placer le fichier (par exemple `bank.csv` ou `bank-full.csv`) dans un dossier local `data/`.  
-3. Adapter le chemin d'accès au fichier dans le notebook si nécessaire. [web:448][web:454]
+3. Adapter le chemin d'accès au fichier dans le notebook si nécessaire.
