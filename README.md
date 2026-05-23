@@ -163,15 +163,7 @@ La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont 
 
 ## Stack technique
 
-- **Python**
-- **Pandas**
-- **NumPy**
-- **Matplotlib**
-- **Seaborn**
-- **Scikit-learn**
-- **XGBoost**
-- **Imbalanced-learn**
-- **Jupyter Notebook**
+`Python` · `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `Scikit-learn` · `XGBoost` · `Random-Forest` · `Logistic-regression` · `K-Means` · `Imbalanced-learn` · `Jupyter Notebook`
 
 ---
 
