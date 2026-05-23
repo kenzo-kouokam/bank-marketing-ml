@@ -189,14 +189,16 @@ campagne_marketing_bancaire
 ├── notebook.ipynb
 ├── README.md
 ├── data/
-│ └── readme.md ← Source et description du dataset
-└── img/        ← Captures des résultats
+│ └── readme.md                     ← Source et description du dataset
+└── img/                            ← Captures des résultats
     ├── target-distribution.png
+    ├── taux-souscription-profils.png
+    ├── variables-cat-vs-souscription.png
     ├── correlation-heatmap.png
-    ├── conversion-by-segment.png
-    ├── xgboost-roc-curve.png
-    ├── model-comparison.png
-    ├── feature-importance.png
+    ├── modele-xgboost.png
+    ├── modele-regression-logistique.png
+    ├── modele-knn.png
+    ├── comparaison-models.png
     └── kmeans-pca-clusters.png
 ```
 
