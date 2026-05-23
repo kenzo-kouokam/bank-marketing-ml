@@ -132,7 +132,7 @@ La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont 
   
 ### 2. Taux de souscription par profil client
 
-![Distribution de la cible](./img/02-eda-taux_souscription_profils.png)
+![Distribution de la cible](./img/02-eda-taux_souscription_profils..png)
 
 ### 3. Analyse comparative variables catégorielles vs souscription
 
@@ -152,7 +152,7 @@ La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont 
 
 ### 7. Modèle de K Nearest Neighbors (KNN) 
 
-![KNN](./img/05-ml-knn.png)
+![KNN](./img/07-ml-knn.png)
 
 ### 8. Comparaison des performances des modèles
 
