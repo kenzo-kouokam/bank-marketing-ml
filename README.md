@@ -205,7 +205,7 @@ campagne_marketing_bancaire
 ---
 
 ## Auteur
-**Cedric Kouokam** —  Data Analyst / Data Scientist / BI — Epitech Toulouse
+**Cedric KOUOKAM** —  Data Analyst / Data Scientist / BI — Epitech Toulouse
 
 Machine Learning • NLP • Data Visualization • Business Analytics
 
