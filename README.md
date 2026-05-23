@@ -200,9 +200,10 @@ campagne_marketing_bancaire
 ---
 
 ## Auteur
+**Cedric Kouokam** —  Data Analyst / Data Scientist
 
-**Enzo Kouokam**  
+Machine Learning • NLP • Data Visualization • Business Analytics
+
+[LinkedIn](https://www.linkedin.com/in/enzo-kamhoua/) · [GitHub](https://github.com/kenzo-kouokam)  · [Portfolio](https://kenzo-kouokam.github.io/cedric.kouokam/)  · [CV]()
+ 
 Master Data Science & Business Intelligence — Epitech Toulouse
-
-- [LinkedIn](https://www.linkedin.com/in/enzo-kamhoua/)
-- [GitHub](https://github.com/kenzo-kouokam)
