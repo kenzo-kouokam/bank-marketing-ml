@@ -35,12 +35,15 @@ L’enjeu est donc de transformer les données clients et l’historique de cont
 
 ## Dataset
 
-- **45 211 observations**
-- **17 variables**
-- **Cible binaire** : souscription (`yes` / `no`)
-- **11,7 %** de réponses positives, soit un dataset fortement déséquilibré [file:459]
+| Caractéristique | Détail |
+|---|---|
+| Source | Bank Marketing Dataset |
+| Volume | 45 211 observations |
+| variable | 17 variables |
+| Variable cible | `y` :binaire (souscription : yes / no) |
+| Taux de souscription |**11,7 %** de réponses positives, soit un dataset fortement déséquilibré |
 
-### Variables exploitées
+#### Variables exploitées
 
 - **Profil client** : âge, métier, situation familiale, niveau d’éducation, balance, prêts
 - **Contexte de contact** : canal, jour, mois
@@ -48,39 +51,40 @@ L’enjeu est donc de transformer les données clients et l’historique de cont
 
 ---
 
-## Démarche
+## Démarche analytique : Pipeline
 
 ### 1. Analyse exploratoire
 
 L’EDA a permis d’identifier plusieurs signaux utiles pour la décision :
-
 - un fort **déséquilibre de classes** ;
-- des variables très discriminantes comme `poutcome`, `contact`, `job` et `campaign` [file:459]
-- une variable `duration` très explicative, mais non exploitable dans un cadre **pré-appel**, car connue uniquement après le contact [file:459]
+- des variables très discriminantes comme `poutcome`, `contact`, `education`,`job` et `campaign`
+- une variable `duration` très explicative, mais non exploitable dans un cadre **pré-appel**, car connue uniquement après le contact
 
 ### 2. Préparation des données
 
 Les principales étapes de preprocessing ont été :
-
 - consolidation des observations répétées ;
+- nettoyage des doublons chronologiques ;
 - conservation des modalités `unknown` comme information métier ;
 - traitement spécifique de `pdays` ;
-- encodage adapté selon la nature des variables ;
+- encodage adapté selon la nature des variables ; `ordinal encoding` · `one-hot encoding` · `label encoding`
 - standardisation des variables numériques ;
 - séparation train/test stratifiée ;
-- rééquilibrage des classes avec **SMOTE** sur l’échantillon d’entraînement [file:459]
+- rééquilibrage des classes avec **SMOTE** sur l’échantillon d’entraînement.
 
 ### 3. Modélisation
 
 Trois modèles supervisés ont été comparés :
-
-- **Régression Logistique**
-- **Random Forest**
-- **XGBoost**
+| Modèle | Notes |
+|---|---|
+| Régression Logistique | modèle de base, simple et interprétable | 
+| Random Forest | capable de capturer des relations non linéaires | 
+| **XGBoost** | **modèle de boosting plus performant sur cette problématique** | 
 
 Le projet intègre aussi une approche non supervisée :
-
-- **K-Means** pour segmenter les clients en groupes homogènes et rendre les résultats plus actionnables côté métier [file:459]
+| Modèle | Notes |
+|---|---|
+| **K-Means**  | segmenter les clients en groupes homogènes et rendre les résultats plus actionnables côté métier  | 
 
 ---
 
@@ -88,7 +92,7 @@ Le projet intègre aussi une approche non supervisée :
 
 ### Modèle retenu
 
-**XGBoost** est le modèle le plus performant du projet, avec un **ROC-AUC de 0,76**. À seuil optimisé, il permet de mieux détecter les clients susceptibles de souscrire, tout en gardant une précision exploitable dans un contexte marketing. [file:459]
+**XGBoost** est le modèle le plus performant du projet, avec un **ROC-AUC de 0,76**. À seuil optimisé, il permet de mieux détecter les clients susceptibles de souscrire, tout en gardant une précision exploitable dans un contexte marketing.
 
 ### Lecture business
 
@@ -98,11 +102,11 @@ Le vrai sujet est le **choix du seuil de décision** :
 
 - un seuil plus haut limite les appels inutiles ;
 - un seuil plus bas augmente la détection des souscripteurs ;
-- le bon arbitrage dépend du coût d’un appel et de la valeur d’une conversion. [file:459]
+- le bon arbitrage dépend du coût d’un appel et de la valeur d’une conversion.
 
 ### Segmentation client
 
-La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont un segment prioritaire avec un taux de conversion de **19 %**, soit près du double de la moyenne globale. Ce cluster se distingue notamment par un historique de contact plus riche, ce qui en fait une cible prioritaire pour les campagnes futures. [file:459]
+La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont un segment prioritaire avec un taux de conversion de **19 %**, soit près du double de la moyenne globale. Ce cluster se distingue notamment par un historique de contact plus riche, ce qui en fait une cible prioritaire pour les campagnes futures.
 
 ---
 
@@ -114,7 +118,7 @@ La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont 
 - exploiter davantage le **canal de contact** et les variables de temporalité ;
 - utiliser **XGBoost** comme base de scoring ;
 - ajuster le **seuil de décision** selon la stratégie commerciale ;
-- compléter le scoring individuel par une logique de **segmentation marketing**. [file:459]
+- compléter le scoring individuel par une logique de **segmentation marketing**.
 
 ---
 
@@ -188,9 +192,8 @@ Ce projet illustre ma capacité à :
 ```bash
 .
 ├── campagne_marketing_bancaire.ipynb
-├── Rapport-campagne-marketing-bancaire.docx
 ├── README.md
-└── assets/
+└── img/
     ├── target-distribution.png
     ├── correlation-heatmap.png
     ├── conversion-by-segment.png
