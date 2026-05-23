@@ -190,10 +190,12 @@ Ce projet illustre ma capacité à :
 ## Structure du projet
 
 ```bash
-.
-├── campagne_marketing_bancaire.ipynb
+campagne_marketing_bancaire
+├── notebook.ipynb
 ├── README.md
-└── img/
+├── data/
+│ └── readme.md ← Source et description du dataset
+└── img/        ← Captures des résultats
     ├── target-distribution.png
     ├── correlation-heatmap.png
     ├── conversion-by-segment.png
