@@ -80,6 +80,7 @@ Trois modèles supervisés ont été comparés :
 | Régression Logistique | modèle de base, simple et interprétable | 
 | Random Forest | capable de capturer des relations non linéaires | 
 | **XGBoost** | **modèle de boosting plus performant sur cette problématique** | 
+| KNN | modèle de classification supervisée qui attribue à une nouvelle observation la classe majoritaire parmi ses K voisins |
 
 Le projet intègre aussi une approche non supervisée :
 | Modèle | Notes |
@@ -125,45 +126,47 @@ La segmentation **K-Means** a permis d’identifier **3 profils clients**, dont 
 ## Visuels clés du projet
 
 ### 1. Distribution de la cible
-**Pourquoi ce visuel est important :** il montre immédiatement le déséquilibre de la variable cible et justifie le choix de métriques adaptées ainsi que l’usage de SMOTE.
 
-![Distribution de la cible](./assets/target-distribution.png)
+![Distribution de la cible](./img/01-eda-desequilibre_cible.png)
+  Déséquilibre de la variable cible
+  
+### 2. Taux de souscription par profil client
 
-### 2. Matrice de corrélation des variables numériques
-**Pourquoi ce visuel est important :** il synthétise les relations entre variables quantitatives et pose les bases de l’analyse exploratoire.
+![Distribution de la cible](./img/02-eda-taux_souscription_profils.png)
 
-![Matrice de corrélation](./assets/correlation-heatmap.png)
+### 3. Analyse comparative variables catégorielles vs souscription
 
-### 3. Taux de conversion par variable métier forte
-**Pourquoi ce visuel est important :** il met en évidence les segments les plus réceptifs et fait le lien direct entre analyse descriptive et ciblage marketing.
+![Distribution de la cible](./img/03-eda-variables_cat_vs_souscription.png)
 
-![Taux de conversion par segment](./assets/conversion-by-segment.png)
+### 4. Heatmap de corrélation 
 
-### 4. Courbe ROC du modèle XGBoost
-**Pourquoi ce visuel est important :** il illustre la capacité du modèle retenu à discriminer les souscripteurs potentiels.
+![Matrice de corrélation](./img/04-eda-heatmap_correlation.png)
 
-![Courbe ROC XGBoost](./assets/xgboost-roc-curve.png)
+### 5. Modèle XG-Boost 
 
-### 5. Comparaison des performances des modèles
-**Pourquoi ce visuel est important :** il permet de justifier de manière synthétique le choix final du modèle.
+![XGBoost](./img/05-ml-xgboost.png)
 
-![Comparaison des modèles](./assets/model-comparison.png)
+### 6. Modèle de régression logistique
 
-### 6. Importance des variables XGBoost
-**Pourquoi ce visuel est important :** il rend le modèle plus interprétable et met en avant les facteurs les plus actionnables pour les équipes métier.
+![Rl](./img/06-ml-rl.png)
 
-![Importance des variables](./assets/feature-importance.png)
+### 7. Modèle de K Nearest Neighbors (KNN) 
 
-### 7. PCA et profil des clusters
-**Pourquoi ce visuel est important :** il apporte une lecture complémentaire au scoring en montrant des segments clients distincts et exploitables.
+![KNN](./img/05-ml-knn.png)
 
-![PCA et profils de clusters](./assets/kmeans-pca-clusters.png)
+### 8. Comparaison des performances des modèles
+
+![Comparaison des modèles](./img/08-ml-comparaison__des_modeles.png)
+
+### 10. PCA & Taux de conversion par cluster
+
+![PCA et profils de clusters](./img/09-clustering-knn.png)
 
 ---
 
 ## Stack technique
 
-`Python` · `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `Scikit-learn` · `XGBoost` · `Random-Forest` · `Logistic-regression` · `K-Means` · `Imbalanced-learn` · `Jupyter Notebook`
+`Python` · `Pandas` · `NumPy` · `Matplotlib` · `Seaborn` · `Scikit-learn` · `XGBoost` · `KNN`· `Random-Forest` · `Logistic-regression` · `K-Means` · `Imbalanced-learn` · `Jupyter Notebook`
 
 ---
 
