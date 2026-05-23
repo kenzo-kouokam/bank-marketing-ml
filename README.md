@@ -80,7 +80,7 @@ Trois modèles supervisés ont été comparés :
 | Régression Logistique | modèle de base, simple et interprétable | 
 | Random Forest | capable de capturer des relations non linéaires | 
 | **XGBoost** | **modèle de boosting plus performant sur cette problématique** | 
-| KNN | modèle de classification supervisée qui attribue à une nouvelle observation la classe majoritaire parmi ses K voisins |
+| KNN | modèle de classification supervisée, observation de la classe majoritaire parmi ses K voisins |
 
 Le projet intègre aussi une approche non supervisée :
 | Modèle | Notes |
