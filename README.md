@@ -209,5 +209,5 @@ campagne_marketing_bancaire
 
 Machine Learning • NLP • Data Visualization • Business Analytics
 
-[LinkedIn](https://www.linkedin.com/in/enzo-kamhoua/) · [GitHub](https://github.com/kenzo-kouokam)  · [Portfolio](https://kenzo-kouokam.github.io/cedric.kouokam/)  · [CV]()
+[LinkedIn](https://www.linkedin.com/in/enzo-kamhoua/) · [GitHub](https://github.com/kenzo-kouokam)  · [Portfolio](https://kenzo-kouokam.github.io/cedric.kouokam/)  · [CV](https://github.com/kenzo-kouokam/cedric.kouokam/blob/main/img/Enzo_KOUOKAM.pdf)
  
